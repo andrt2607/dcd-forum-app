@@ -10,7 +10,7 @@ import { describe, it, expect } from 'vitest';
 import leaderboardsReducer from './reducer';
 
 describe('leaderboardsReducer function', () => {
-  it('should return the initial state when given by unknown action', () => {
+  it('should return the initial state when given by unknown actions', () => {
     // arrange
     const initialState = [];
     const action = { type: 'UNKNOWN' };
@@ -19,7 +19,7 @@ describe('leaderboardsReducer function', () => {
     const nextState = leaderboardsReducer(initialState, action);
 
     // assert
-    expect(nextState).toThrowError(initialState);
+    expect(nextState).toEqual(initialState);
   });
 
   it('should return the leaderboards when given by RECEIVE_LEADERBOARDS action', () => {
