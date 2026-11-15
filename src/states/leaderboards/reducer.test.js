@@ -19,7 +19,7 @@ describe('leaderboardsReducer function', () => {
     const nextState = leaderboardsReducer(initialState, action);
 
     // assert
-    expect(nextState).toEqual(initialState);
+    expect(nextState).toThrowError(initialState);
   });
 
   it('should return the leaderboards when given by RECEIVE_LEADERBOARDS action', () => {
